@@ -1,14 +1,14 @@
 resource "local_file" "devops"{
 
 filename = "c:/test1.txt"
-content = "variable testing"
+content = var.file_content.content1
 }
 
 
 resource "local_file" "devops1"{
 
 filename = var.filename
-content = var.content
+content = var.file_content.content2
 }
 
 resource "random_string" "password" {
