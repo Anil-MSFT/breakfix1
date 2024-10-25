@@ -20,3 +20,24 @@ variable "file_content" {
     "content2" = "This is my second content"
   }
 }
+
+variable "file_list" {
+  type = list(string)
+  default = ["Anil", "Aarush", "Saswati"]
+  
+}
+
+variable "aws_ec2_object" {
+  type = object({
+    name = string
+    instances = number
+    keys = list(number)
+    ami = string
+  })
+  default = {
+    name = "myEC2"
+    instances = 4
+    keys = [52 , 53]
+    ami = "34rfrlelelem"
+  }
+}
