@@ -20,7 +20,7 @@ resource "aws_instance" "my_EC2" {
   instance_type = "t2.micro"
 
   tags = {
-    name = "TestServer1"
+    Name = "TestServer1"
   }
 
 }
